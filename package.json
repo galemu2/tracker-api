@@ -11,8 +11,8 @@
         "start": "nodemon -e js,graphql -w . -w .env server.js",
         "lint": "eslint .",
         "initalize": "mongo issuetracker scripts/init.mongo.js",
-        "initalize-atlas": "mongo mongodb+srv://galemu00:Galemu00MongoTest@cluster0-s9vfn.mongodb.net/issuetracker scripts/init.mongo.js",
-        "initalize-atlas1": "mongo mongodb+srv://galemu00:Galemu00MongoTest@cluster0-s9vfn.mongodb.net/issuetracker scripts/generate_data.mongo.js"
+        "initalize-atlas": "mongo mongodb+srv://galemu00:Galemu00MongoTest@cluster0-s9vfn.mongodb.net/issuetracker?retryWrites=true scripts/init.mongo.js",
+        "initalize-atlas1": "mongo mongodb+srv://galemu00:Galemu00MongoTest@cluster0-s9vfn.mongodb.net/issuetracker?retryWrites=true scripts/generate_data.mongo.js"
     },
     "keywords": [],
     "author": "",
