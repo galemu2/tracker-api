@@ -6,9 +6,13 @@ let db;
 // function to connect to Mongo Database
 async function connectToDb() {
     const URL = process.env.DB_URL || 'mongodb://localhost/issuetracker'; // 127.0.0.1:27017
+    console.log('URL: ', URL.toString());
     const client = new MongoClient(URL, { useNewUrlParser: true });
-    await client.connect();
-    console.log('Connected to MongoDB at', URL);
+    await client.connect().then(() => {
+        console.log('Connected to MongoDB at', URL);
+    }).catch((error) => {
+        console.log('Connection to MongoDB error: ', error);
+    });
     db = client.db();
 }
 
